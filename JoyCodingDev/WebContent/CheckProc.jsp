@@ -4,7 +4,7 @@
     
 <% request.setCharacterEncoding("UTF-8"); %>
 
-<jsp:useBean id="loginBean" class="bean.LoginBean" scope="page" />
+<jsp:useBean id="loginBean" class="bean.LoginBean" scope="session" />
 	<jsp:setProperty name="loginBean" property="code" />
 
 <%

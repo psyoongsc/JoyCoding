@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" 
-    import="java.sql.*" import="java.util.Date,java.text.SimpleDateFormat" %>
+    import="java.sql.*" %>
 
 <% request.setCharacterEncoding("UTF-8"); %>
 
@@ -8,7 +8,7 @@
 
 <%
 	String sql_1 = "select value from joycoding.jc_variables where name=?";
-	String sql_2 = "insert into joycoding.lunch_application (num, code, menu, store, price, date) values (?, ?, ?, ?, ?, ?)";
+	String sql_2 = "insert into joycoding.lunch_application (num, name, menu, store, price, date) values (?, ?, ?, ?, ?, ?)";
 	
 	
 		Class.forName("com.mysql.jdbc.Driver");
@@ -22,34 +22,35 @@
 		String num = rs.getString("value");
 		
 		int p_num = Integer.parseInt(num);
-		String sql_3 = "update joycoding.jc_variables set value=? where name=lunchCnt";
+		String sql_3 = "update joycoding.jc_variables set value=? where name=?";
 		stmt.close();
 		
 		rs.close();
 		
 		PreparedStatement stmt2 = conn.prepareStatement(sql_3);
 			stmt2.setString(1, String.valueOf(++p_num));
+			stmt2.setString(2, "lunchCnt");
 			
 		stmt2.executeUpdate();
 		stmt2.close();
 		
 		String info = request.getParameter("lunch_menu");
 		String info_data[] = info.split("_");
-
-		Date d = new Date();
-		SimpleDateFormat sf = new SimpleDateFormat("yyyy/MM/dd a hh:mm");
+		
+		Timestamp tmstm = new Timestamp(System.currentTimeMillis());
 		
 		PreparedStatement pstmt = conn.prepareStatement(sql_2);
-			pstmt.setString(1, "1");
-			pstmt.setString(2, loginBean.getCode());
+			pstmt.setString(1, String.valueOf(p_num));
+			pstmt.setString(2, loginBean.getName());
 			pstmt.setString(3, info_data[1]);
 			pstmt.setString(4, info_data[0]);
 			pstmt.setString(5, info_data[2]);
-			pstmt.setString(6, sf.format(d));
+			pstmt.setTimestamp(6, tmstm);
+		
 		pstmt.executeUpdate();
 		
 		pstmt.close();
 		conn.close();
-		out.println("허허허");
-		
+
+
 		%>

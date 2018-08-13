@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" 
     import="java.sql.*" import="bean.LoginBean" %>
     
 <jsp:useBean id="loginBean" class="bean.LoginBean" scope="session" />
@@ -19,15 +19,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>а║╫и╫ец╩</title>
+<meta charset="UTF-8">
+<title>Л═░Л▀╛Л▀═Л╡╜</title>
 </head>
 <body>
 <center>
-	<h4>а║╫и╦ч╢╨ ╪╠ецго╠Б</h4>
+	<h4>Л═░Л▀╛К╘■К┴╢ Л└═М┐²М∙≤Й╦╟</h4>
 	
-	╦т╟М ╫мю╨ ╦ч╢╨╦╕ ╪╠ецго╪╪©Д<br>
-	╫ец╩юз : <%= loginBean.getName() %>
+	К╗╧ЙЁ═ Л▀╤Л²─ К╘■К┴╢К╔╪ Л└═М┐²М∙≤Л└╦Л ■<br>
+	Л▀═Л╡╜Л·░ : <%= loginBean.getName() %>
 	
 	<form method=post action=lunch_applicationProc.jsp>
 		<select name=lunch_menu size=4>
@@ -48,8 +48,8 @@
 			%>
 		</select><p>
 		
-		<input type=submit value=" ╫е ц╩ ">
-		<input type=reset value=" цК ╪р ">
+		<input type=submit value=" Л▀═ Л╡╜ ">
+		<input type=reset value=" Л╥╗ Л├▄ ">
 	</form>
 </center>
 </body>
