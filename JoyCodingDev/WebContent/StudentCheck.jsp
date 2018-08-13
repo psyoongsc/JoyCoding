@@ -1,19 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>¿ø»ı µîÇÏ¿ø ÆäÀÌÁö</title>
+<meta charset="UTF-8">
+<title>ì›ìƒ ë“±í•˜ì› í˜ì´ì§€</title>
 
 <script language="JavaScript">
 	function In_Check() {
 		if (document.check.code.value == "") {
-			alert("ÇĞ»ıÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä!!!");
+			alert("í•™ìƒì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”!!!");
 			return;
 		}
 		if (document.check.code.value.length != 6) {
-			alert("ÇĞ»ıÄÚµå´Â 6ÀÚ¸®ÀÔ´Ï´Ù.")
+			alert("í•™ìƒì½”ë“œëŠ” 6ìë¦¬ì…ë‹ˆë‹¤.")
 			document.check.code.value = "";
 			return;
 		}
@@ -26,11 +26,11 @@
 <form method="post" action="CheckProc.jsp" name="check">
 	<table border="1" colspan="1">
 		<tr>
-			<td>ÇĞ»ı ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä</td></tr>
+			<td>í•™ìƒ ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”</td></tr>
 		<tr><center>
 			<td><input type="text" name="code" size="17" /></td></tr></center>
 	</table>
-	<input type="button" value="µîÇÏ¿ø" OnClick="In_Check()"/>
+	<input type="button" value="ë“±í•˜ì›" OnClick="In_Check()"/>
 </form>
 </center>
 </body>

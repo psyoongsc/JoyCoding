@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
     import="bean.LoginBean" %>
     
 <% request.setCharacterEncoding("UTF-8"); %>
@@ -14,14 +14,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>¸ÞÀÎÆäÀÌÁö</title>
+<meta charset="UTF-8">
+<title>ë©”ì¸íŽ˜ì´ì§€</title>
 </head>
 <body>
-<%= loginBean.getName() %>´Ô ¾î¼­¿À¼¼¿ä.<p>
+<%= loginBean.getName() %>ë‹˜ ì–´ì„œì˜¤ì„¸ìš”.<p>
 
 <form method="post" action="lunch_application.jsp" name="menu">
-	<input type="submit" name="lunch_application" value="Á¡½É½ÅÃ»" />
+	<input type="submit" name="lunch_application" value="ì ì‹¬ì‹ ì²­" />
 </form>
 </body>
 </html>

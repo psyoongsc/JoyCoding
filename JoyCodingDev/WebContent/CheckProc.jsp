@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
     import="java.sql.*, bean.LoginBean" %>
     
 <% request.setCharacterEncoding("UTF-8"); %>
@@ -24,7 +24,7 @@
 		
 		String name = rs.getString("name");
 		
-		out.println(name + "´Ô ¾î¼­¿À¼¼¿ä.");
+		out.println(name + "ë‹˜ ì–´ì„œì˜¤ì„¸ìš”.");
 		
 		pstmt.close();
 		conn.close();
