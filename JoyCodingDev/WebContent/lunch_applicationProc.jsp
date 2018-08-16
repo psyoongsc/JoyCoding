@@ -54,3 +54,19 @@
 
 
 		%>
+		
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>점심신청</title>
+</head>
+<body>
+<center>
+	<h4>점심신청이 완료되었습니다!</h4>
+	<form method="post" action="StudentCheck.jsp">
+		<input type="submit" value=" 확 인 ">
+	</form>
+</center>
+</body>
+</html>

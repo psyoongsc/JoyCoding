@@ -8,7 +8,7 @@
 	<jsp:setProperty name="loginBean" property="code" />
 
 <%
-	String sql = "select name from joycoding.account where code=?";
+	String sql = "select * from joycoding.account where code=?";
 	
 	
 	
@@ -19,20 +19,42 @@
 			pstmt.setString(1, loginBean.getCode());
 			
 		ResultSet rs = pstmt.executeQuery();
-
-		rs.next();
 		
-		String name = rs.getString("name");
 		
-		out.println(name + "님 어서오세요.");
+		
+		if(rs.next() == false){
+			%>
+			<script>
+			alert("존재하지 않는 학생코드 입니다.");
+			document.location.href="StudentCheck.jsp";
+			</script>
+			<%
+		}else{
+			String name = rs.getString("name");
+			
+			out.println(name + "님 어서오세요.");
+			
+			if(rs.getString("position").equals("student")) {	
+			%>
+				<jsp:forward page="main.jsp">
+					<jsp:param name="name" value="<%= name %>" />
+				</jsp:forward>
+			
+			<%
+			}
+			else {
+			%>
+				<jsp:forward page="teacher_main.jsp">
+					<jsp:param name="name" value="<%= name %>" />
+				</jsp:forward>
+			<%
+			}
+			
+		}
+	
+		
 		
 		pstmt.close();
 		conn.close();
-		%>
-		<jsp:forward page="main.jsp">
-			<jsp:param name="name" value="<%= name %>" />
-		</jsp:forward>
-		
-		<%
 		rs.close();
 %>
