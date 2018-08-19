@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initail-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<title>원생 로그인 페이지</title>
 
@@ -47,7 +47,7 @@
 					</tr>
 					<tr>
 						<td align="right">
-							<input class="btn btn-primary pull-right" style="text-align : center; "type="button" value="등하원" OnClick="In_Check()"/>
+							<input class="btn btn-primary pull-right" type="button" value="등하원" OnClick="In_Check()"/>
 						</td>
 					</tr>
 				</tbody>
