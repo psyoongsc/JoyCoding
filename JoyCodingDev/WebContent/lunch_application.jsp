@@ -2,7 +2,10 @@
     pageEncoding="UTF-8" 
     import="java.sql.*" import="bean.LoginBean" %>
     
+<% request.setCharacterEncoding("UTF-8"); %>
+
 <jsp:useBean id="loginBean" class="bean.LoginBean" scope="session" />
+	<jsp:setProperty name="loginBean" property="name" />
     
 <%
 	String sql = "select * from joycoding.lunch";

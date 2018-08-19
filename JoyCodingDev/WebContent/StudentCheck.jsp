@@ -3,8 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>원생 로그인 페이지</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initail-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<title>원생 로그인 페이지</title>
 
 <script language="JavaScript">
 	function In_Check() {
@@ -22,16 +24,35 @@
 </script>
 </head>
 <body>
-<center>
-<form method="post" action="CheckProc.jsp" name="check">
-	<table border="1" colspan="1">
-		<tr>
-			<td>학생 코드를 입력하세요</td></tr>
-		<tr>
-			<td><center><input type="text" name="code" size="17" /></center></td></tr>
-	</table>
-	<input type="button" value="등하원" OnClick="In_Check()"/>
-</form>
-</center>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<div class="container">
+		<form method="post" action="CheckProc.jsp" name="check">
+			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+				<thead>
+					<tr>
+						<th style="text-align: center;">학생 코드 입력</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input class="form-control" maxlength="6" type="text" name="code" placeholder="학생코드 6자리"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							( 학생코드는 휴대폰번호 뒷자리와 특별한 두개의 숫자로 입력해주세요. )
+						</td>
+					</tr>
+					<tr>
+						<td align="right">
+							<input class="btn btn-primary pull-right" style="text-align : center; "type="button" value="등하원" OnClick="In_Check()"/>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
 </body>
 </html>

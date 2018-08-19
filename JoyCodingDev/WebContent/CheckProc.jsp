@@ -36,7 +36,7 @@
 			
 			if(rs.getString("position").equals("student")) {	
 			%>
-				<jsp:forward page="main.jsp">
+				<jsp:forward page="lunch_application.jsp">
 					<jsp:param name="name" value="<%= name %>" />
 				</jsp:forward>
 			

@@ -7,10 +7,6 @@
 <jsp:useBean id="loginBean" class="bean.LoginBean" scope="session" />
 	<jsp:setProperty name="loginBean" property="name" />
 
-<%
-
-	String name = request.getParameter("name");
-%>
 <!DOCTYPE html>
 <html>
 <head>
