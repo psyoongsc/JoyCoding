@@ -34,7 +34,10 @@
 			
 			out.println(name + "님 어서오세요.");
 			
-			if(rs.getString("position").equals("student")) {	
+			if(rs.getString("position").equals("student")) {
+				pstmt.close();
+				conn.close();
+				rs.close();
 			%>
 				<jsp:forward page="lunch_application.jsp">
 					<jsp:param name="name" value="<%= name %>" />
@@ -43,6 +46,9 @@
 			<%
 			}
 			else {
+				pstmt.close();
+				conn.close();
+				rs.close();
 			%>
 				<jsp:forward page="teacher_main.jsp">
 					<jsp:param name="name" value="<%= name %>" />
@@ -51,10 +57,4 @@
 			}
 			
 		}
-	
-		
-		
-		pstmt.close();
-		conn.close();
-		rs.close();
 %>

@@ -47,7 +47,7 @@
 					</tr>
 					<tr>
 						<td align="right">
-							<input class="btn btn-primary pull-right" type="button" value="등하원" OnClick="In_Check()"/>
+							<input class="btn btn-primary pull-right" type="button" value="로그인" OnClick="In_Check()"/>
 						</td>
 					</tr>
 				</tbody>
