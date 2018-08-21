@@ -22,38 +22,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.css">
 <title>점심신청</title>
 </head>
 <body>
-<center>
-	<h4>점심메뉴 선택하기</h4>
-	
-	먹고 싶은 메뉴를 선택하세요<br>
-	신청자 : <%= loginBean.getName() %>
-	
-	<form method=post action=lunch_applicationProc.jsp>
-		<select name=lunch_menu size=4>
-			<%
-				String store_tmp, menu_tmp, price_tmp;
-				while (rs.next()) {
-					store_tmp = rs.getString(2);
-					menu_tmp = rs.getString(3);
-					price_tmp = rs.getString(4);
-					%>
-						<option value="<%= store_tmp %>_<%= menu_tmp %>_<%= price_tmp %>"><%= store_tmp %>_<%= menu_tmp %>
-					<%
-				}
-				
-				pstmt.close();
-				conn.close();
-				rs.close();
-			%>
-		</select><p>
-		
-		<input type=submit value=" 신 청 ">
-		<input type=reset value=" 취 소 ">
-	</form>
-</center>
+	<br>
+	<div class="container" style="height: 50%; overflow:hidden" >
+			<table class="table table-striped" style="text-align: center; border: 2px solid #dddddd; height: 50% ;overflow:hidden">
+				<thead>
+					<tr style="height:7%">
+						<th colspan="2" style="text-align: center;">점심 메뉴 선택</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr style="height:20% ">
+						<td  valign=middle >
+							이름 : <%= loginBean.getName() %>
+						</td>
+						<td valign=middle >
+							코드:	<%= loginBean.getCode() %>
+						</td>
+					</tr>
+					<tr>
+						<td style="height:50vh ; overflow:scroll" colspan="2" >
+							<div class="container" style="height: 50vh; overflow:scroll" >
+								<table style="text-align: center; width:100%; height:50vh ; overflow:hidden" >
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+									<tr>
+										<td>성용아 살아나라</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+					</tr>
+					<tr >
+						<td style="height:10%" colspan="2" align="right">
+							<input class="btn btn-outline-primary pull-right" type="button" value="로그인" OnClick="In_Check()" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 </body>
 </html>

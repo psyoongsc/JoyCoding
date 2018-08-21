@@ -27,6 +27,8 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<div class="container">
+
+	<br>
 		<form method="post" action="CheckProc.jsp" name="check">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
@@ -37,7 +39,7 @@
 				<tbody>
 					<tr>
 						<td>
-							<input class="form-control" maxlength="6" type="text" name="code" placeholder="학생코드 6자리"/>
+							<input class="form-control" maxlength="6" type="tel" name="code" placeholder="학생코드 6자리"/>
 						</td>
 					</tr>
 					<tr>
@@ -47,7 +49,7 @@
 					</tr>
 					<tr>
 						<td align="right">
-							<input class="btn btn-primary pull-right" type="button" value="로그인" OnClick="In_Check()"/>
+							<input class="btn btn-outline-primary pull-right" type="button" value="로그인" OnClick="In_Check()" />
 						</td>
 					</tr>
 				</tbody>
