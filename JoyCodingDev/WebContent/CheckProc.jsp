@@ -10,7 +10,7 @@
 <%
 	String sql = "select * from joycoding.account where code=?";
 	
-	
+	//ffff
 	
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "1122");
