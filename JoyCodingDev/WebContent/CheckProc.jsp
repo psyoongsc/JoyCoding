@@ -10,9 +10,6 @@
 <%
 	String sql = "select * from joycoding.account where code=?";
 	
-	//ffffffff
-	//Hello Psy?
-	
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "1122");
 	
@@ -32,8 +29,6 @@
 			<%
 		}else{
 			String name = rs.getString("name");
-			
-			out.println(name + "님 어서오세요.");
 			
 			if(rs.getString("position").equals("student")) {
 				pstmt.close();

@@ -21,7 +21,7 @@
     
 <!DOCTYPE html>
 <html>
-<head>
+<head >
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -46,7 +46,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td style="height:50vh ; overflow:scroll" colspan="2" >
+						<td style="height:50vh ; overflow:hidden" colspan="2" >
 							<div class="container" style="height: 50vh; overflow:scroll" >
 								<table style="text-align: center; width:100%; height:50vh ; overflow:hidden" >
 									<tr>
