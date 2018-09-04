@@ -39,6 +39,7 @@
 		
 		Timestamp tmstm = new Timestamp(System.currentTimeMillis());
 		
+		
 		PreparedStatement pstmt = conn.prepareStatement(sql_2);
 			pstmt.setString(1, String.valueOf(p_num));
 			pstmt.setString(2, loginBean.getName());

@@ -11,7 +11,7 @@
 	String sql = "select * from joycoding.account where code=?";
 	
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "1122");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://joycoding.iptime.org/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "root codingjoy77");
 	
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, loginBean.getCode());
