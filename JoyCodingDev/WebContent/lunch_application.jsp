@@ -9,13 +9,21 @@
     
 <%
 	String sql = "select * from joycoding.lunch";
+	try {
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "1122");
 	
-	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "1122");
-	
-	Statement pstmt = conn.createStatement();
+		Statement pstmt = conn.createStatement();
 			
-	ResultSet rs = pstmt.executeQuery(sql);
+		ResultSet rs = pstmt.executeQuery(sql);
+	}catch(Exception e) {
+		%>
+		<script>
+		alert("점심메뉴 조회에 실패하였습니다.");
+		document.location.href="StudentCheck.jsp";
+		</script>
+		<%
+	}
 
 %>
     

@@ -9,6 +9,7 @@
 
 <%
 	String sql = "select * from joycoding.account where code=?";
+	try {
 	
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://joycoding.iptime.org/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "root codingjoy77");
@@ -53,4 +54,12 @@
 			}
 			
 		}
+	}catch(Exception e) {
+		%>
+		<script>
+		alert("학생코드 조회에 실패하였습니다.");
+		document.location.href="StudentCheck.jsp";
+		</script>
+		<%
+	}
 %>

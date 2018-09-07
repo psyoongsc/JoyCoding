@@ -7,9 +7,9 @@
 
 <%
 	String sql = "select * from joycoding.account";
-	
+	try{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "1122");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://joycoding.iptime.org/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "root codingjoy77");
 	
 		Statement stmt = conn.createStatement();
 			
@@ -100,5 +100,13 @@
 stmt.close();
 conn.close();
 rs.close();
+	}catch(Exception e) {
+		%>
+		<script>
+		alert("학생명단 조회에 실패하였습니다.");
+		document.location.href="teacher_main.jsp";
+		</script>
+		<%
+	}
 %>
 </html>

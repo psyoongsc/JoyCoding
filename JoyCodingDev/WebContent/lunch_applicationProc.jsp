@@ -10,9 +10,9 @@
 	String sql_1 = "select value from joycoding.jc_variables where name=?";
 	String sql_2 = "insert into joycoding.lunch_application (num, name, menu, store, price, date) values (?, ?, ?, ?, ?, ?)";
 	
-	
+	try{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "1122");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1/joycoding?useSSL=false&useUnicode=true&characterEncoding=UTF-8", "root", "112");
 	
 		PreparedStatement stmt = conn.prepareStatement(sql_1);
 			stmt.setString(1, "lunchCnt");
@@ -53,7 +53,14 @@
 		pstmt.close();
 		conn.close();
 
-
+	}catch(Exception e) {
+		%>
+		<script>
+		alert("점심메뉴 신청에 실패하였습니다.");
+		document.location.href="StudentCheck.jsp";
+		</script>
+		<%
+	}
 		%>
 		
 <!DOCTYPE html>

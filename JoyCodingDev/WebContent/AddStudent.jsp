@@ -4,8 +4,9 @@
 <html>
 <script language="JavaScript">
 	function In_Check() {
-		alert("아직 구현중인 기능입니다.");
-		return;
+		//alert("아직 구현중인 기능입니다.");
+		//return;
+		document.check.submit();
 	}
 </script>
 <head>
@@ -36,7 +37,7 @@
 					</tr>
 					<tr>
 						<th style="text-align: center; width: 20vh" colspan=>학년</th>
-						<td><input class="form-control" maxlength="6" type="text" name="code" placeholder="ex) 초3 중1 고2 대1"/></td>
+						<td><input class="form-control" maxlength="6" type="text" name="grade" placeholder="ex) 초3 중1 고2 대1"/></td>
 					</tr>
 					<tr>
 						<td align="right" colspan="2">
