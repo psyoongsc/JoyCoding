@@ -29,7 +29,7 @@
 	<div class="container">
 
 	<br>
-		<form method="post" action="CheckProc.jsp" name="check">
+		<form method="get" action="CheckProc.jsp" name="check">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>

@@ -4,8 +4,20 @@
 <html>
 <script language="JavaScript">
 	function In_Check() {
-		//alert("아직 구현중인 기능입니다.");
-		//return;
+		
+		if (document.check.code.value.length != 6) {
+			alert("코드는 6자리로 구성되어야 합니다.");
+			return;
+		}
+		if (document.check.name.value == "") {
+			alert("이름을 입력해주세요.");
+			return;
+		}
+		if (document.check.grade.value == "") {
+			alert("학년을 입력해주세요.");
+			return;
+		}
+		
 		document.check.submit();
 	}
 </script>
